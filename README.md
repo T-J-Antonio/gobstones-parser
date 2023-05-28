@@ -11,7 +11,7 @@ Gobstones also provides the following expressions:
 - nroBolitas (Rojo|Azul|Negro|Verde): checks how many balls of this colour the currently selected cell has. Reduces to an integer value.
 - natural numeric literals. They are interpreted as integer values.
 - hayBolitas (Rojo|Azul|Negro|Verde): checks whether the currently selected cell has at least one ball of this colour. Reduces to a boolean value.
-- puedeMover (Norte|Sur|Este|Oeste): checks whether there's available space in this cardinal direction to move, i.e. whether Mover will succeed or fail if executed with this cardinal direction. Reduces to a boolean value.
+- puedeMover (Norte|Sur|Este|Oeste): checks whether there's available space in this cardinal direction to move, i.e. whether Mover will succeed if executed with this cardinal direction. Reduces to a boolean value.
 
 Currently, this parser is only able to parse a subset of the original language:
 - programs: they define the main context of the program, using the "program" keyword.
