@@ -1,0 +1,12 @@
+program{
+    repeat(35){
+        Poner(Rojo)
+        Poner(Verde)
+    }
+    Mover(Norte)
+    Mover(Sur)
+    if (hayBolitas(Negro))
+        Poner(Rojo)
+    else
+        Poner(Azul)
+}
