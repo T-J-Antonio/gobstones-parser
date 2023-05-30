@@ -9,4 +9,7 @@ program{
         Poner(Rojo)
     else
         Poner(Azul)
+    while (nroBolitas(Negro) <= 10){
+        Poner(Negro)
+    }
 }

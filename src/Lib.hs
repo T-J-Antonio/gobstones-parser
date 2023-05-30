@@ -26,6 +26,7 @@ type Statement = Board -> Either String Board
 type BoolExpr = Board -> Bool
 type IntExpr = Board -> Int
 type Program = Board -> String
+type BoolOperand = Int -> Int -> Bool
 
 emptyCell :: Cell
 emptyCell = Cell 0 0 0 0
@@ -104,6 +105,9 @@ numberOfBalls Black board = black $ (!! currentCell board) $ cells board
 
 program :: Statement -> Program
 program instruction = bifoldr const (\board _-> show board) "" . instruction
+
+comparison :: IntExpr -> BoolOperand -> IntExpr -> BoolExpr
+comparison intExpr1 compareF intExpr2 board = compareF (intExpr1 board) (intExpr2 board)
 
 aProgram :: Program
 aProgram = program $ chain [ moveStatement North
