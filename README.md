@@ -12,6 +12,7 @@ Gobstones also provides the following expressions:
 - natural numeric literals. They are interpreted as integer values.
 - `hayBolitas (Rojo|Azul|Negro|Verde)`: checks whether the currently selected cell has at least one ball of this colour. Reduces to a boolean value.
 - `puedeMover (Norte|Sur|Este|Oeste)`: checks whether there's available space in this cardinal direction to move, i.e. whether Mover will succeed if executed with this cardinal direction. Reduces to a boolean value.
+- boolean comparison between two integer expressions, using the infix operands: `<=`, `<`, `>=`, `>`.
 
 Currently, this parser is only able to parse a subset of the original language:
 - programs: they define the main context of the program, using the "program" keyword.
